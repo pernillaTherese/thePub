@@ -2,7 +2,6 @@
 import NavList from "./components/NavList.vue";
 
 export default {
-  NavList,
   components: { NavList },
 };
 </script>
