@@ -1,1 +1,1 @@
-# A Vue.js template for Vite
+# School assignment for Vite/Vue.js
