@@ -1,0 +1,42 @@
+# Query: drinkchoice
+# ContextLines: 1
+
+11 results - 3 files
+
+src/store.js:
+  3  const mutations = {
+  4:     updateDrink(state, drinkChoice) {
+  5:       state.drinkChoice = drinkChoice;
+  6      },
+
+  8    state = {
+  9:     drinkChoice: "",
+  10      toastchoice: "",
+
+src/views/DrinkView.vue:
+  10  <template>
+  11:   <h1>Du dricker {{ $store.state.drinkChoice }}!</h1>
+  12    <h2>*** Njuuuuut! ***</h2>
+
+src/views/PubView.vue:
+  20    computed: {
+  21:     drinkChoice: {
+  22        get() {
+  23:         return this.$store.state.drinkChoice;
+  24        },
+
+  39        <br />
+  40:       <input v-model="drinkChoice" placeholder="Ex. öl vin mjölk" />
+  41      </td>
+
+  57          @click="getResult(inputValue)"
+  58:         :disabled="drinkChoice.length === 0 || toastchoice.length === 0"
+  59        >
+
+  63      <RouterLink v-if="!toastYes" to="drink">
+  64:       <button id="nextButton" :disabled="drinkChoice.length === 0">
+  65          drick
+
+  81  
+  82: <!-- :disabled="drinkChoice.length === 0 || toastchoice.length === 0" -->
+  83  
